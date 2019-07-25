@@ -1,6 +1,3 @@
-## config file ##
-application.yml
-
 /target/
 !.mvn/wrapper/maven-wrapper.jar
 
