@@ -1,0 +1,12 @@
+[submodule "imustacm_parent"]
+	path = imustacm_parent
+	url = https://github.com/imustacm/imustacm_parent.git
+[submodule "imustacm-user-service"]
+	path = imustacm-user-service
+	url = https://github.com/imustacm/imustacm-user-service.git
+[submodule "imustacm-user-api"]
+	path = imustacm-user-api
+	url = https://github.com/imustacm/imustacm-user-api.git
+[submodule "imustacm-common"]
+	path = imustacm-common
+	url = https://github.com/imustacm/imustacm-common.git
