@@ -1,3 +1,8 @@
+## redis
+redis.conf
+redis_data
+## docker file
+docker-compose.yml
 /target/
 !.mvn/wrapper/maven-wrapper.jar
 

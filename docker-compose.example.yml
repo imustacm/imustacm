@@ -1,0 +1,47 @@
+version: "3"
+services:
+  backend-user-service:
+    build: ./imustacm-user-service
+    container_name: user-service
+    ports:
+      - "0.0.0.0:8082:8080"
+  judge_server:
+    build: ./JudgerServer
+    read_only: true
+    container_name: judge-server
+    cap_drop:
+      - SETPCAP
+      - MKNOD
+      - NET_BIND_SERVICE
+      - SYS_CHROOT
+      - SETFCAP
+      - FSETID
+    tmpfs:
+      - /tmp
+    volumes:
+      - $PWD/JudgerServer/test_case:/test_case:ro
+      - $PWD/JudgerServer/log:/log
+      # - $PWD/server:/code:ro
+      - $PWD/JudgerServer/run:/judger
+    environment:
+      - BACKEND_URL=http://backend:80/api/judge_server_heartbeat
+      - SERVICE_URL=http://judge-server:12358
+      - TOKEN=IMUSTACM_TOKEN
+    ports:
+      - "0.0.0.0:12358:8080"
+  redis:
+    image: redis
+    container_name: judge-redis
+    command: redis-server /usr/local/etc/redis/redis.conf --appendonly yes
+    ports:
+      - "6379:6379"
+    volumes:
+      - $PWD/redis.conf:/usr/local/etc/redis/redis.conf
+      - $PWD/redis_data:/data
+  dashboard:
+    build: ./JudgerServer/server/dashboard
+    image: dashboard
+    container_name: judge-dashboard
+    ports:
+      - '9181:9181'
+    command: rq-dashboard -H redis --username dashboard-username --password dashboard-password --redis-password redispassword

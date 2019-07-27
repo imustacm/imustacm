@@ -10,3 +10,9 @@
 [submodule "imustacm-common"]
 	path = imustacm-common
 	url = https://github.com/imustacm/imustacm-common.git
+[submodule "JudgerServer"]
+	path = JudgerServer
+	url = https://github.com/imustacm/JudgerServer.git
+[submodule "OnlineJudgeFE"]
+	path = OnlineJudgeFE
+	url = https://github.com/imustacm/OnlineJudgeFE.git
