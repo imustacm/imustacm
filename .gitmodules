@@ -16,3 +16,9 @@
 [submodule "OnlineJudgeFE"]
 	path = OnlineJudgeFE
 	url = https://github.com/imustacm/OnlineJudgeFE.git
+[submodule "imustacm-problem-service"]
+	path = imustacm-problem-service
+	url = https://github.com/imustacm/imustacm-problem-service.git
+[submodule "imustacm-problem-api"]
+	path = imustacm-problem-api
+	url = https://github.com/imustacm/imustacm-problem-api.git
