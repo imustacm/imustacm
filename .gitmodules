@@ -22,3 +22,6 @@
 [submodule "imustacm-problem-api"]
 	path = imustacm-problem-api
 	url = https://github.com/imustacm/imustacm-problem-api.git
+[submodule "imustacm-eureka"]
+	path = imustacm-eureka
+	url = https://github.com/imustacm/imustacm-eureka.git
