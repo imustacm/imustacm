@@ -25,3 +25,6 @@
 [submodule "imustacm-eureka"]
 	path = imustacm-eureka
 	url = https://github.com/imustacm/imustacm-eureka.git
+[submodule "imustacm-gateway"]
+	path = imustacm-gateway
+	url = https://github.com/imustacm/imustacm-gateway.git
