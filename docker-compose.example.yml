@@ -1,10 +1,25 @@
 version: "3"
 services:
+  backend-eureka:
+    build: ./imustacm-eureka
+    container_name: eureka
+    ports:
+      - "0.0.0.0:6868:6868"
+  backend-gateway:
+    build: ./imustacm-gateway
+    container_name: gateway
+    ports:
+      - "0.0.0.0:8888:8888"
   backend-user-service:
     build: ./imustacm-user-service
     container_name: user-service
     ports:
-      - "0.0.0.0:8082:8080"
+      - "0.0.0.0:8080:8080"
+  backend-problem-service:
+    build: ./imustacm-problem-service
+    container_name: problem-service
+    ports:
+      - "0.0.0.0:9090:9090"
   judge_server:
     build: ./JudgerServer
     read_only: true
