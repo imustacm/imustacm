@@ -1,3 +1,5 @@
+## logs
+./logs/
 ## redis
 redis.conf
 redis_data
